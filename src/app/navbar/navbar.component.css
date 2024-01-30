@@ -1,0 +1,60 @@
+.navbar {
+    padding: 15px;
+    color: white;
+    text-align: center;
+    transition: top 1.5s, background-color 1.5s;
+}
+
+.sticky {
+    position: fixed;
+    height: 10%;
+    top: 0;
+    z-index: 111;
+    background-color: transparent;
+}
+
+.sticky.scrolled {
+    background-color: white;
+    top: 0px;
+    transition: .5s;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .navbar-nav .nav-link {
+    margin-left: 25px;
+    padding: 10px 0;
+    
+    font-weight: 400;
+    outline: none;
+    cursor: pointer;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link.active .nav-link:hover {
+    color: #A40000;
+}
+
+
+.scrolled .nav-link {
+    color: #A40000;
+    background-color: white;
+
+    transition: top 1.5s, background-color 1.5s;
+}
+
+.scrolled .nav-link:hover {
+    color: #002462;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: #A40000;
+} 
+
+#navbarCollapse {
+    background-color: white;
+}
+

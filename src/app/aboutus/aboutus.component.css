@@ -1,0 +1,89 @@
+.company_section {
+    background-size: cover;
+}
+
+.company_section {
+    width: 100%;
+    float: left;
+    background-image: url(../../assets/images/port-1.png);
+    height: auto;
+    padding-bottom: 25px;
+    background-repeat: no-repeat;
+}
+
+.layout_padding {
+    padding-top: 90px;
+    padding-bottom: 0px;
+}
+
+.compant_taital {
+    font-size: 14px;
+    padding: 30px 20px;
+    margin-top: 30px;
+}
+
+.compant_taital {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #ffffff;
+    border: 2px solid #f0e4e4;
+    padding: 50px 30px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+
+
+
+
+
+/* counter */
+
+.block-counter-1 {
+    text-align: center;
+}
+
+@media (max-width: 991.98px) {
+    .block-counter-1 .number {
+        font-size: 2rem;
+    }
+}
+
+.block-counter-1 .number {
+    color: #A40000;
+    font-size: 4rem;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.block-counter-1 .number,
+.block-counter-1 .caption {
+    display: block;
+    line-height: 1;
+}
+
+.block-counter-1 .caption {
+    font-size: 14px;
+    letter-spacing: .05em;
+}
+
+
+.block-counter-1 .number:after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 3px;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: rgba(52, 58, 64, 0.3);
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}

@@ -1,0 +1,25 @@
+.fab {
+    color: #A40000;
+}
+
+.fab:hover {
+    color: #002462;
+}
+
+.nav-link {
+    padding: 1px 0;
+    color: #002462;
+    outline: none;
+    cursor: pointer;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #A40000;
+}
+
+.flag {
+    background-image: url("../../assets/images/x-flag.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
