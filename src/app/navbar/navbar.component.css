@@ -23,7 +23,7 @@
 .navbar .navbar-nav .nav-link {
     margin-left: 25px;
     padding: 10px 0;
-    
+
     font-weight: 400;
     outline: none;
     cursor: pointer;
@@ -52,9 +52,55 @@
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
     color: #A40000;
-} 
+}
 
 #navbarCollapse {
     background-color: white;
 }
 
+.Logo_theX {
+    width: 40%;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .custom-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+
+    .custom-toggler.navbar-toggler {
+        border-color: rgb(255, 102, 203);
+    }
+
+    .navbar {
+        text-align: center;
+        background-color: white;
+    }
+
+    #navbarCollapse {
+        background-color: white;
+    }
+
+    .nav-link {
+        color: #A40000;
+    }
+
+    .nav-link.active .nav-link:hover {
+        color: white;
+    }
+
+    .scrolled .nav-link {
+        color: #A40000;
+        background-color: white;
+    }
+
+    .Navcss {
+        background-color: white;
+    }
+
+    .Logo_theX {
+        width: 90%;
+    }
+
+}

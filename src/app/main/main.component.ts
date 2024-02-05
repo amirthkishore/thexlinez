@@ -12,12 +12,16 @@ export class MainComponent {
     private router: Router
   ) { }
 
+  ngOnInit(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     return false;
   }
 
-  Mainbtn(){
+  Mainbtn() {
     this.router.navigate(['/home']);
   }
 

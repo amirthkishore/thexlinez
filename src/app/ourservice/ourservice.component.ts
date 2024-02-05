@@ -10,6 +10,7 @@ declare var $: any;
 export class OurserviceComponent {
 
   ngOnInit(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
     this.initializeOwlCarousel();
   }
 
@@ -31,7 +32,7 @@ export class OurserviceComponent {
       slideSpeed: 100,
       autoPlay: true,
     });
-    
+
   }
 
 }
