@@ -25,6 +25,9 @@ export class MainComponent {
     this.router.navigate(['/home']);
   }
 
+  contactus() {
+    this.router.navigate(['/contact']);
+  }
 
 
 }

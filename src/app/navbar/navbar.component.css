@@ -30,18 +30,19 @@
 }
 
 .nav-link {
-    color: white;
+    /* color: white; */
+    color: #A40000;
 }
 
 .nav-link.active .nav-link:hover {
-    color: #A40000;
+
+    color: #002462;
 }
 
 
 .scrolled .nav-link {
     color: #A40000;
     background-color: white;
-
     transition: top 1.5s, background-color 1.5s;
 }
 
@@ -49,13 +50,15 @@
     color: #002462;
 }
 
+
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-    color: #A40000;
+    color:  #002462;
 }
 
-#navbarCollapse {
-    background-color: white;
+.collapse {
+    background-color: #ffffff4d;
+    border-radius: 20px;
 }
 
 .Logo_theX {
@@ -87,7 +90,8 @@
     }
 
     .nav-link.active .nav-link:hover {
-        color: white;
+        color: #002462;
+        background-color: white;
     }
 
     .scrolled .nav-link {
