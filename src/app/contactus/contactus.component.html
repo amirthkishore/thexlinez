@@ -2,12 +2,7 @@
   <div class="container">
     <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center pt-5 pb-5">
       <div class="col-12 col-lg-6" data-aos="fade-down">
-        <img
-          class="img-fluid rounded"
-          loading="lazy"
-          src="../../assets/images/working-company.jpg"
-          alt=""
-        />
+        <img class="img-fluid rounded" loading="lazy" src="../../assets/images/working-company.jpg" alt="" />
       </div>
       <div class="col-12 col-lg-6" data-aos="fade-down">
         <div class="row justify-content-xl-center">
@@ -23,18 +18,19 @@
 
             <form class="form p-0">
               <div class="username">
-                <input type="text" placeholder="Enter your Name" required />
+                <input type="text" [(ngModel)]="l_Name" placeholder="Enter your Name" required />
               </div>
               <div class="useremail">
-                <input type="email" placeholder="Enter your email" required />
+                <input type="email" [(ngModel)]="l_Email" placeholder="Enter your email" required />
               </div>
               <div class="usermessage">
-                <textarea placeholder="Enter your message" required></textarea>
+                <textarea [(ngModel)]="l_Message" placeholder="Enter your message" required></textarea>
               </div>
               <div class="usersubmit">
-                <input type="submit" value="Sent Message" />
+                <input type="submit" value="Sent Message" (click)="submitForm()" />
               </div>
             </form>
+
           </div>
         </div>
       </div>

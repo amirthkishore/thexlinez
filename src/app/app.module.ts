@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { OurserviceComponent } from './ourservice/ourservice.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
