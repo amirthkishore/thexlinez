@@ -12,7 +12,7 @@ export class NavbarComponent {
   isScrolled = false;
 
   constructor(
-    private router: Router
+    private router: Router,
   ) { }
 
   @HostListener('window:scroll', ['$event'])
@@ -24,6 +24,14 @@ export class NavbarComponent {
   private getOffset() {
     const navbarElement = document.querySelector('.navbar');
     return navbarElement ? navbarElement.getBoundingClientRect().top : 0;
+  }
+
+  onToggleClick(): void {
+    const navbarCollapse = document.getElementById("navbarCollapse")?.classList.contains("show")
+
+    if (navbarCollapse) {
+      //bootstrap.Collapse.getInstance(navbarCollapse).hide();
+    }
   }
 
   goToTop() {
