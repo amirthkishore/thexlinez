@@ -16,18 +16,21 @@
               following ways.
             </p>
 
-            <form class="form p-0">
+            <form class="form p-0" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
               <div class="username">
-                <input type="text" [(ngModel)]="l_Name" placeholder="Enter your Name" required />
+                <input type="text" formControlName="name" name="Name" id="name" placeholder="Enter your Name" required />
               </div>
               <div class="useremail">
-                <input type="email" [(ngModel)]="l_Email" placeholder="Enter your email" required />
+                <input type="email" name="Email" formControlName="email" id="email" placeholder="Enter your email" required />
+                <div *ngIf="contactForm.get('email')?.hasError('email') && contactForm.get('email')?.touched">
+                  Invalid email address
+                </div>
               </div>
               <div class="usermessage">
-                <textarea [(ngModel)]="l_Message" placeholder="Enter your message" required></textarea>
+                <textarea formControlName="message" name="Message" id="message" placeholder="Enter your message" required></textarea>
               </div>
               <div class="usersubmit">
-                <input type="submit" value="Sent Message" (click)="submitForm()" />
+                <input type="submit" value="Sent Message" />
               </div>
             </form>
 
