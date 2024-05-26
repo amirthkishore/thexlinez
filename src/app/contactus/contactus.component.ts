@@ -19,7 +19,7 @@ export class ContactusComponent {
   ) { }
 
   ngOnInit(): void {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
@@ -29,32 +29,33 @@ export class ContactusComponent {
   }
 
   onSubmit() {
-    //console.log('Contact Information:', this.contactForm.value);
     if (this.contactForm.valid) {
-      // Access form values using this.contactForm.value
       console.log('Contact Information:', this.contactForm.value);
-
-      this.makeApiCall();
-
-      //alert("Message Sent successful")
+      this.sentMailEvent();
+      alert('Message Sent successfully');
     } else {
-      alert("Enter a valid input")
+      alert('Enter valid input');
     }
   }
 
-  makeApiCall() {
-    const apiUrl = 'https://script.google.com/macros/s/AKfycbx1KrSEuRAVNL0jheR3Q0qR2LdvOQPUz0T79CFyPimJwRq5_9KEi6WsXWXjiet6Ei8n/exec';
+  sentMailEvent() {
+    const mailtoLink = `mailto:amirthkishore9500@gmail.com?subject=New Message from ${this.contactForm.value.name}&body=${(
+      this.contactForm.value.message + '\n\nFrom: ' + this.contactForm.value.email
+    )}`;
 
-    this.http.get(apiUrl).subscribe(
-      (response) => {
-        console.log('API Response:', response);
-        alert('Message Sent successfully');
-      },
-      (error) => {
-        console.error('API Error:', error);
-        alert('Failed to send message. Please try again later.');
-      }
-    );
+    console.log(mailtoLink);
+
+    const emailWindow = window.open(mailtoLink, '_blank');
+
+    if (!emailWindow || emailWindow.closed || typeof emailWindow.closed === 'undefined') {
+      alert('Please make sure your browser allows pop-ups for sending emails.');
+    }
   }
-
 }
+
+
+/* emailjs.send("service_8b4t8g5","template_tp2zkko",{
+  from_name: "adfhdsh",
+  from_email: "dfhdhfdh",
+  message: "dghghgfh",
+  }); */
