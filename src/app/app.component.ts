@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'thexlinez';
+  title = 'X linez';
   spinneractivityflag: number = 0;
   isLoaded: boolean = false;
 

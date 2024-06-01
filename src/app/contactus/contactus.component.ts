@@ -39,7 +39,7 @@ export class ContactusComponent {
   }
 
   sentMailEvent() {
-    const mailtoLink = `mailto:amirthkishore9500@gmail.com?subject=New Message from ${this.contactForm.value.name}&body=${(
+    const mailtoLink = `mailto:support@thexlinez.com?subject=New Message from ${this.contactForm.value.name}&body=${(
       this.contactForm.value.message + '\n\nFrom: ' + this.contactForm.value.email
     )}`;
 

@@ -9,6 +9,11 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
     path: 'navbar',
     component: NavbarComponent
   },
@@ -31,12 +36,7 @@ const routes: Routes = [
   {
     path: 'footer',
     component: FooterComponent
-  },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full' // Change 'prefix' to 'full'
-  },
+  }
 ];
 
 @NgModule({
